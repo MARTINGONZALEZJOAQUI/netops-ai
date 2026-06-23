@@ -1,0 +1,14 @@
+services:
+  hermes:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: netops-hermes:latest
+    container_name: hermes
+    restart: unless-stopped
+    command: gateway run
+    network_mode: host
+    volumes:
+      - ~/.hermes:/opt/data
+      - ~/netops:/opt/data/netops
+      - ~/.ssh:/opt/data/.ssh:ro

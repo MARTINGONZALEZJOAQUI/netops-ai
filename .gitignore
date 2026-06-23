@@ -1,0 +1,35 @@
+# Secretos: nunca subir
+.env
+*.env
+!.env.example
+config.yaml
+*.config.yaml
+hermes/config.yaml
+
+# Llaves y hosts SSH
+id_*
+*.pem
+*.key
+known_hosts
+known_hosts.*
+
+# Estado y datos de Hermes
+sessions/
+audio_cache/
+cache/
+*.bak
+*.bak.*
+*.bak_*
+gateway.lock
+gateway.pid
+gateway_state.json
+.hermes_history
+
+# Estado de los scripts SDN
+.enlace_degradado
+.enlace_remediado
+
+# Sistema
+__pycache__/
+*.pyc
+.DS_Store

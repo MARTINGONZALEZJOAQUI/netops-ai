@@ -1,0 +1,42 @@
+﻿{
+  "jobs": [
+    {
+      "id": "4d88044dff20",
+      "name": "netops-monitor",
+      "prompt": "",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "base_url": null,
+      "script": "monitoreo_automatico.sh",
+      "no_agent": true,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "*/5 * * * *",
+        "display": "*/5 * * * *"
+      },
+      "schedule_display": "*/5 * * * *",
+      "repeat": {
+        "times": null,
+        "completed": 155
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-06-19T18:35:33.802596-05:00",
+      "next_run_at": "2026-06-23T00:30:00-05:00",
+      "last_run_at": "2026-06-23T00:25:16.093807-05:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "telegram:TU_CHAT_ID",
+      "origin": null,
+      "enabled_toolsets": null,
+      "workdir": null
+    }
+  ],
+  "updated_at": "2026-06-23T00:25:16.094355-05:00"
+}
