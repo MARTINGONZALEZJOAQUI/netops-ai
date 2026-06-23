@@ -127,6 +127,4 @@ El agente se opera escribiendo en el chat de Telegram. Estas frases recorren tod
 
 El monitoreo proactivo no requiere escribir nada. El trabajo programado publica la alerta por sí mismo cuando detecta una incidencia.
 
-## Validación
 
-El prototipo se demuestra en vivo durante la sustentación, con el agente operando sobre la red real desde Telegram. En el documento `DOCUMENTACION.md`, se detalla la arquitectura de despliegue y todos los archivos.
