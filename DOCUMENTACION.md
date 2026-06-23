@@ -1,6 +1,6 @@
 # Documentación del proyecto NetOps AI
 
-Este documento reúne la descripción completa de lo realizado en el proyecto. Cubre el objetivo, las decisiones técnicas, la arquitectura de despliegue, las máquinas involucradas, el inventario de archivos, los flujos de operación, el modo Docker, el manejo de la seguridad y el cumplimiento de cada requisito del enunciado.
+Este documento reúne la descripción completa de lo realizado en el proyecto. Cubre el objetivo, las decisiones técnicas, la arquitectura de despliegue, las máquinas involucradas, el inventario de los archivos, los flujos de operación, el modo Docker, el manejo de la seguridad y el cumplimiento de cada requerimiento del trabajo.
 
 ## Objetivo del proyecto
 
@@ -8,9 +8,9 @@ El proyecto implementa un agente de inteligencia artificial que cumple el papel 
 
 ## Decisión técnica sobre el modelo de lenguaje
 
-El enunciado plantea como arquitectura ideal correr un modelo cuantizado de forma local con Ollama. Durante la implementación se comprobó que la tarjeta gráfica del portátil dispone de ocho gigabytes de memoria de video, una cantidad que no alcanza para sostener un modelo con la capacidad de razonamiento y de uso de herramientas que el agente necesita. Se probaron varios modelos locales de la familia de siete y ocho mil millones de parámetros y todos fallaban al manejar el prompt completo del framework, ya fuera quedándose sin respuesta o inventando datos.
+Se planteaba como arquitectura ideal correr un modelo cuantizado de forma local con Ollama. Durante la implementación se comprobó que la tarjeta gráfica del portátil dispone de ocho gigabytes de memoria de video, una cantidad que no alcanza para sostener un modelo con la capacidad de razonamiento y de uso de herramientas que el agente necesita. Se probaron varios modelos locales de la familia de siete y ocho mil millones de parámetros y todos fallaban al manejar el prompt completo del framework, ya fuera quedándose sin respuesta o inventando datos.
 
-La solución fue mover el modelo a la nube mediante NVIDIA NIM, que ofrece un punto de acceso compatible con el estándar de OpenAI y una capa gratuita suficiente para el proyecto. El modelo elegido es meta/llama-3.3-70b-instruct, que soporta el uso de herramientas de forma fiable. La arquitectura del agente no cambió. Lo único que cambió fue el lugar donde se ejecuta el modelo, que pasó del portátil a la nube. Esta decisión queda documentada de forma transparente porque respeta el espíritu del enunciado y resuelve una restricción real de hardware.
+La solución fue mover el modelo a la nube mediante NVIDIA NIM, que ofrece un punto de acceso compatible con el estándar de OpenAI y una capa gratuita suficiente para el proyecto. El modelo elegido es meta/llama-3.3-70b-instruct, que soporta el uso de herramientas de forma fiable. La arquitectura del agente no cambió. Lo único que cambió fue el lugar donde se ejecuta el modelo, que pasó del portátil a la nube. 
 
 ## Arquitectura de despliegue
 

@@ -38,7 +38,6 @@ En las máquinas virtuales se necesita lo siguiente.
 
 1. La primera máquina virtual requiere Ryu con soporte de OpenFlow 1.3 y la opción de observación de enlaces.
 2. La segunda máquina virtual requiere Mininet con Open vSwitch y Python 3.
-3. Cada máquina virtual dispone de dieciséis gigabytes de memoria y cuatro procesadores virtuales, según las restricciones de hardware del enunciado.
 
 ## Permisos
 
