@@ -227,7 +227,7 @@ El primer comando para el gateway nativo para que los dos procesos no choquen co
 
 ## Seguridad y manejo de secretos
 
-El proyecto trata las credenciales con cuidado porque el repositorio es público. El token del bot de Telegram y la clave de API de NVIDIA nunca entran al control de versiones. El repositorio solo contiene plantillas de ejemplo con los campos vacíos. El archivo de exclusión bloquea el archivo de variables de entorno real, el archivo de configuración real con la clave, las llaves SSH y los datos de sesión del agente. Antes de publicar se realizó un escaneo del contenido que confirmó la ausencia de cualquier secreto. 
+ El token del bot de Telegram y la clave de API de NVIDIA nunca entran al control de versiones. El repositorio solo contiene plantillas de ejemplo con los campos vacíos. El archivo .gitignore bloquea el archivo de variables de entorno real, el archivo de configuración real con la clave, las llaves SSH y los datos de sesión del agente. 
 
 ## Cumplimiento de los requisitos 
 
